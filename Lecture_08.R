@@ -51,16 +51,19 @@ BreakpointSort <- function(vector){
   start <- FindSorted(vector)
   
   while (start < length(vector)) {
-    mark <- IndicateAscending(vector)
+    # mark <- IndicateAscending(vector)
     
-    descending_values <- vector[mark == 0]
+    # descending_values <- vector[mark == 0]
     
-    if (length(descending_values) == 0) {
-      break
-    }
+    # if (length(descending_values) == 0) {
+      #break
+    #}
     
-    min_desc_value <- min(descending_values)
-    end <- which(vector == min_desc_value)[1]
+    # min_desc_value <- min(descending_values)
+    # end <- which(vector == min_desc_value)[1]
+    
+    target <- start - 1
+    end <- which(vector == target)[1]
     
     
     if (is.na(end) || end <= start) break
